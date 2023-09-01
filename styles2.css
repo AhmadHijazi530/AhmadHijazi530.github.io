@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: url(back1.jpg);
+    background-size: cover;
+}
+/*Index Page*/
+.bodyofindex {
+    background-color: white;
+}
+
+.navofindex{
+    display:flex;
+    width: 90%;
+    margin: auto;
+    padding: 0 0;
+    align-items:center;
+    justify-content: space-between;
+}
+@media (max-width:1200px){
+    .navofindex ul{
+        display: flex;
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background:rgba(184,151,84,1);
+        text-align: left;
+        transition: all 0.4s ease;
+    }
+    .navofindex a{
+        display: block;
+        padding: 0.2rem;
+        margin: 0.5rem;
+        border-left: 3px solid black;
+    }
+    .navofindex ul.open{
+        top: 17%;
+    }
+}
+@media (max-width:600px){
+    .imglogo{
+        margin-left:-5%;
+        height: 80%;
+        width: 80%;
+    }
+}
+.menu{
+    font-size: 2.5em;
+    cursor: pointer;
+}
+@media (min-width:1200px){
+    .menu{
+        display:none;
+    }
+}
+.navofindex ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+.navofindex ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.navofindex ul li a:hover{
+    color: red;
+    transition: 0.3s;
+}
+.detel{
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.detel h1{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+.Hij{
+    color: rgba(184,151,84,1);
+}
+.detel p {
+    color: #555;
+    line-height: 22px;
+}
+.detel a{
+    background: #212121;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color:#fff;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+.container{
+    display: grid;
+    grid-template-columns:  auto 40% ;
+    min-height: 75vh;
+
+    
+}
+.Image {
+
+    margin-top: 5%;
+}
+.Image img{
+    height: 400px;
+
+}
+@media (max-width:1000px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.Image img{
+    border-radius: 10%;
+
+}
+
+    /*transition: bottom 1s, left 1s;*/
+
+
+/*.Image:hover .imge{
+    left: 5px;
+}*/
+footer{
+    position: relative;
+    bottom: 0;
+
+    min-width: 100%;
+    /*background-color: rgba(158,115,54,1);*/
+    background-color: rgba(184,151,84,1);
+}
+
+.navoffooter{
+    text-align: center;
+}
+.navoffooter ul li {
+    display: inline-block;
+    align-items: center;
+    list-style: none;
+    margin: 10px 30px;
+    font-size: 2em;
+}
+.navoffooter ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.navoffooter ul li a:hover{
+    color: red;
+    transition: 0.3s;
+}
+
+/*EDUCATION PAGEEE*/
+.viewcert a{
+    background: #212121;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color:#fff;
+    display: inline-block;
+    margin: 5px 250px;
+    border-radius: 5px;    
+}
+.container2{
+    display: grid;
+    grid-template-columns:  auto auto ;
+    min-height: 75vh;   
+}
+@media (max-width:1000px){
+    .container2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.Master{
+
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+  .gradicon{
+    font-size: 1.5em;
+  }
+.Master ul li {
+    display:inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+.year{
+    padding-left: 14%;
+    text-align: justify;
+}
+
+/*ABOUT PAGE*/
+#About{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 25px;
+}
+.divofabout{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    text-align: justify;
+    text-align-last: center;
+    min-height: 56vh;
+  }
+
+  /*Skills Page*/
+  .view {
+    background: #212121;
+    padding: 50px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color:#fff;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-right: 1%;
+    border-radius: 5px;    
+}
+meter{
+    font-size: 25px;
+
+
+
+}
+.container3 {
+    min-height: 75vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+@media (max-width:800px){
+    .container3{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*Projects PAge*/
+.container4{
+    min-height: 75vh;
+}
+
+/*Contact Page */
+.container5{
+    min-height: 75vh;
+}
