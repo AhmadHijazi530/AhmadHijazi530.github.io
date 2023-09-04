@@ -2,20 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    box-sizing: border-box;
 }
 html, body{
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     background: url(back1.jpg);
     background-size: cover;
 }
 /*Index Page*/
-.bodyofindex {
-    background-color: white;
-}
 
 .navofindex{
     display:flex;
@@ -25,17 +19,18 @@ html, body{
     align-items:center;
     justify-content: space-between;
 }
-@media (max-width:1200px){
+@media (max-width:1300px){
     .navofindex ul{
         display: flex;
         position: absolute;
         top: -500px;
         left: 0;
-        right: 0;
+        right : 0;
         flex-direction: column;
         background:rgba(184,151,84,1);
         text-align: left;
         transition: all 0.4s ease;
+        z-index: 1;
     }
     .navofindex a{
         display: block;
@@ -43,8 +38,9 @@ html, body{
         margin: 0.5rem;
         border-left: 3px solid black;
     }
+    
     .navofindex ul.open{
-        top: 17%;
+        top: 10vh;
     }
 }
 @media (max-width:600px){
@@ -58,7 +54,7 @@ html, body{
     font-size: 2.5em;
     cursor: pointer;
 }
-@media (min-width:1200px){
+@media (min-width:1300px){
     .menu{
         display:none;
     }
@@ -74,7 +70,9 @@ html, body{
     font-weight: bold;
 }
 .navofindex ul li a:hover{
-    color: red;
+    color: darkgoldenrod;
+    text-decoration-line: underline;
+    text-underline-offset: 0.7rem;
     transition: 0.3s;
 }
 .detel{
@@ -109,9 +107,8 @@ html, body{
 .container{
     display: grid;
     grid-template-columns:  auto 40% ;
-    min-height: 75vh;
 
-    
+
 }
 .Image {
 
@@ -126,6 +123,10 @@ html, body{
         display: flex;
         flex-direction: column;
     }
+    .Image{
+        margin: 0 auto;
+
+    }
 }
 
 .Image img{
@@ -133,16 +134,11 @@ html, body{
 
 }
 
-    /*transition: bottom 1s, left 1s;*/
-
-
-/*.Image:hover .imge{
-    left: 5px;
-}*/
 footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
-
+    height: 38px;
+    margin-top: 0;
     min-width: 100%;
     /*background-color: rgba(158,115,54,1);*/
     background-color: rgba(184,151,84,1);
@@ -155,8 +151,9 @@ footer{
     display: inline-block;
     align-items: center;
     list-style: none;
-    margin: 10px 30px;
-    font-size: 2em;
+    margin: auto 30px;
+    padding-top: 6px;
+    font-size: 1.7em;
 }
 .navoffooter ul li a{
     text-decoration: none;
@@ -164,11 +161,11 @@ footer{
     font-weight: bold;
 }
 .navoffooter ul li a:hover{
-    color: red;
+    color: darkgoldenrod;
     transition: 0.3s;
 }
 
-/*EDUCATION PAGEEE*/
+/*EDUCATION PAGEEE*//*
 .viewcert a{
     background: #212121;
     padding: 10px 10px;
@@ -207,7 +204,7 @@ footer{
     padding-left: 14%;
     text-align: justify;
 }
-
+*/
 /*ABOUT PAGE*/
 #About{
     margin-top: 1%;
@@ -223,46 +220,246 @@ footer{
     margin-top: 4%;
     text-align: justify;
     text-align-last: center;
-    min-height: 56vh;
+    min-height: 52vh;
+    line-height: 35px;
   }
 
-  /*Skills Page*/
-  .view {
-    background: #212121;
-    padding: 50px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    color:#fff;
-    display: inline-block;
-    margin-left: 1%;
-    margin-top: 2%;
-    margin-right: 1%;
-    border-radius: 5px;    
+/*Skills2*/
+
+.skills_section{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-meter{
-    font-size: 25px;
-
-
-
-}
-.container3 {
-    min-height: 75vh;
+.skills_main{
+    width: 80%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
 }
-@media (max-width:800px){
-    .container3{
+@media (max-width:1000px){
+    .skills_main{
         display: flex;
         flex-direction: column;
     }
+
 }
-/*Projects PAge*/
-.container4{
-    min-height: 75vh;
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+    font-weight: 500;
+}
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: darkgoldenrod;
+    border-radius: 25px;
+}
+.skill_bar .bar .ANSYS{
+    width: 90%;
+    animation: ANSYS 2s;
+}
+@keyframes ANSYS {
+    0%{
+        width: 0%;
+    }100%{
+        width: 90%;
+    }
+}
+.skill_bar .bar .MATLAB{
+    width: 85%;
+    animation: MATLAB 2s;
+}
+@keyframes MATLAB {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .SolidWorks{
+    width: 85%;
+    animation: SolidWorks 2s;
+}
+@keyframes SolidWorks {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .Python{
+    width: 70%;
+    animation: Python 2s;
+}
+@keyframes Python {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .Java{
+    width: 65%;
+    animation: Java 2s;
+}
+@keyframes Java {
+    0%{
+        width: 0%;
+    }100%{
+        width: 65%;
+    }
+}
+.skill_bar .bar .Cpp{
+    width: 70%;
+    animation: Cpp 2s;
+}
+@keyframes Cpp {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .LabVIEW{
+    width: 65%;
+    animation: LabVIEW 2s;
+}
+@keyframes LabVIEW {
+    0%{
+        width: 0%;
+    }100%{
+        width: 65%;
+    }
+}
+.skill_bar .bar .AutoCAD{
+    width: 70%;
+    animation: AutoCAD 2s;
+}
+@keyframes AutoCAD {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .HTML{
+    width: 70%;
+    animation: HTML 2s;
+}
+@keyframes HTML {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .CSS{
+    width: 70%;
+    animation: CSS 2s;
+}
+@keyframes CSS {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .SpaceClaim{
+    width: 70%;
+    animation: SpaceClaim 2s;
+}
+@keyframes SpaceClaim {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .DesignModeller {
+    width: 60%;
+    animation: DesignModeller 2s;
+}
+@keyframes DesignModeller {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
 }
 
 /*Contact Page */
 .container5{
+    min-height: 75vh;
+}
+
+
+/*EDUCATION PAGEEE*/
+.viewcert a{
+    background: #212121;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color:#fff;
+    display: inline-block;
+
+    border-radius: 5px;    
+}
+.container2{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    text-align: center;
+    line-height: 25px;
+    justify-content: center;
+    /*
+    display: flex;
+    min-height: 80vh; 
+    text-align: center;
+    justify-content: center;  */
+}
+@media (max-width:1000px){
+    .container2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.Master{
+    padding-top: 25px;
+
+  }
+  .gradicon{
+    font-size: 1rem;
+  }
+.Master ul li {
+    display:inline-block;
+    list-style: none;
+}
+.Text{
+    text-align: center;
+}
+
+
+/*Projects PAge*/
+.container4{
     min-height: 75vh;
 }
